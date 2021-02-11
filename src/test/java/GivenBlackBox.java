@@ -126,4 +126,3623 @@ public class GivenBlackBox {
         assertEquals(bearsExpected, ans, 0.005);
     }
 
+    @Test
+    public void oneBear2clothingsNoSavings()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(4, "Sunglasses"));
+
+        Double expected = 0.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear3clothingsDifferentPricesExpectSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(5, "Sunglasses"));
+        customBear.clothing.add(new Clothing(6, "Shoes"));
+
+        Double expected = 4.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear5clothingsSamePricesExpectSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(4, "Sunglasses"));
+        customBear.clothing.add(new Clothing(4, "Shoes"));
+        customBear.clothing.add(new Clothing(4, "Shirt"));
+        customBear.clothing.add(new Clothing(4, "Jacket"));
+
+        Double expected = 4.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear5clothingsDifferentPricesExpectSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(5, "Sunglasses"));
+        customBear.clothing.add(new Clothing(6, "Shoes"));
+        customBear.clothing.add(new Clothing(7, "Shirt"));
+        customBear.clothing.add(new Clothing(8, "Jacket"));
+
+        Double expected = 4.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear6clothingsDifferentPricesExpectMoreSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(5, "Sunglasses"));
+        customBear.clothing.add(new Clothing(6, "Shoes"));
+        customBear.clothing.add(new Clothing(7, "Shirt"));
+        customBear.clothing.add(new Clothing(8, "Jacket"));
+        customBear.clothing.add(new Clothing(10, "Cape"));
+
+        Double expected = 9.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear6clothingsSamePricesExpectMoreSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(4, "Sunglasses"));
+        customBear.clothing.add(new Clothing(4, "Shoes"));
+        customBear.clothing.add(new Clothing(4, "Shirt"));
+        customBear.clothing.add(new Clothing(4, "Jacket"));
+        customBear.clothing.add(new Clothing(4, "Cape"));
+
+        Double expected = 8.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear7clothingsSamePricesExpectMoreSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(4, "Sunglasses"));
+        customBear.clothing.add(new Clothing(4, "Shoes"));
+        customBear.clothing.add(new Clothing(4, "Shirt"));
+        customBear.clothing.add(new Clothing(4, "Jacket"));
+        customBear.clothing.add(new Clothing(4, "Cape"));
+        customBear.clothing.add(new Clothing(4, "Jeans"));
+
+        Double expected = 8.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear7clothingsDifferentPricesExpectMoreSaving()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(5, "Sunglasses"));
+        customBear.clothing.add(new Clothing(6, "Shoes"));
+        customBear.clothing.add(new Clothing(7, "Shirt"));
+        customBear.clothing.add(new Clothing(8, "Jacket"));
+        customBear.clothing.add(new Clothing(9, "Cape"));
+        customBear.clothing.add(new Clothing(10, "Jeans"));
+
+        Double expected = 9.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear1noiseAccessoryNoSavings()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+
+        customBear.noisemakers.add(new NoiseMaker("Words of Encouragement", "You're the best!", 4));
+
+        Double expected = 0.0;
+        Double ans = bears.calculateSavings();
+        assertEquals(expected, ans, 0.005);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+    @Test
+    public void oneBear()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+    }
+
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+    @Test
+    public void twoBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+    }
+
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+    @Test
+    public void threeBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+    }
+
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+    @Test
+    public void fourBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+    }
+
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+    @Test
+    public void fiveBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+    }
+
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+    @Test
+    public void sixBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+    }
+
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
+    @Test
+    public void sevenBears()
+    {
+        BearWorkshop bears = null;
+        try {
+            bears = createBearWorkshop("DC");
+        } catch (Exception e) {
+        }
+        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear3 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear4 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear5 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear6 = new Bear(Stuffing.stuffing.BASE);
+        bears.addBear(customBear);
+        bears.addBear(customBear1);
+        bears.addBear(customBear2);
+        bears.addBear(customBear3);
+        bears.addBear(customBear4);
+        bears.addBear(customBear5);
+        bears.addBear(customBear6);
+    }
 }
