@@ -15,12 +15,14 @@ public class Clothing implements Comparable<Clothing> {
     }
 
     public int compareTo(Clothing clothes) {
-        if (clothes.price > this.price) {
-            return 1;
-        } else if (clothes.price < this.price) {
-            return -1;
-        } else {
+        if(clothes.price >= this.price - 0.005 && clothes.price <= this.price + 0.005){
             return 0;
+        }
+        else if(clothes.price > this.price){
+            return 1;
+        }
+        else{
+            return -1;
         }
     }
 }
