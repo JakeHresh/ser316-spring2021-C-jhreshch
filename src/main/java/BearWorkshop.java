@@ -1,3 +1,13 @@
+/*
+    File: BearWorkshop.java
+    Author: Dr. Mehlhase
+    Date: 2/20/2021
+
+    Description:
+    This file stores the BearWorkshop class, which is used to keep track of customers purchasing bears and
+    to calculate purchases.
+*/
+
 package main.java;
 
 import java.util.*;
