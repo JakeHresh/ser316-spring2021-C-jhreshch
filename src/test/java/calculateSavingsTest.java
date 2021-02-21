@@ -11,32 +11,20 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
-//import main.java.BearWorkshop;
+import java.lang.System;
+import main.java.BearWorkshop;
 
 import static org.junit.Assert.*;
-
-/***
- * This class provides a framework to implement black box tests for various
- * implementations of the BearWorkshop Class. The BearWorkshop is having a
- * blowout sale and is offering the following savings.
- *
- * Bears are Buy 2 bears, get 1 free. It is 10% off the cost of a bear when a
- * single bear has 10 or more accessories (Note that embroidery, stuffing, and
- * the material used for the bear casing is not considered an accessory).
- * Additionally, clothes are buy 2, get one free on each bear. Only non free clothes count 
- * towards the 10 accessories or more savings part. 
- */
-@RunWith(Parameterized.class)
-public class GivenBlackBox {
-    private Class<BearWorkshop> classUnderTest;
+//@RunWith(Parameterized.class)
+public class calculateSavingsTest {
+    //private Class<BearWorkshop> classUnderTest;
 
     @SuppressWarnings("unchecked")
-    public GivenBlackBox(Object classUnderTest) {
-        this.classUnderTest = (Class<BearWorkshop>) classUnderTest;
+    public calculateSavingsTest(/*Object classUnderTest*/) {
+        //this.classUnderTest = (Class<BearWorkshop>) classUnderTest;
     }
 
-    @Parameters
+    /*@Parameters
     public static Collection<Object[]> courseGradesUnderTest() {
         Object[][] classes = {
                 {BearWorkshop1.class},
@@ -52,6 +40,10 @@ public class GivenBlackBox {
     private BearWorkshop createBearWorkshop(String name) throws Exception {
         Constructor<BearWorkshop> constructor = classUnderTest.getConstructor(String.class);
         return constructor.newInstance(name);
+    }
+*/
+    private BearWorkshop createBearWorkshop(String name) throws Exception{
+    	return new BearWorkshop(name);
     }
 
     BearWorkshop oneBear;
@@ -84,13 +76,6 @@ public class GivenBlackBox {
     @After
     public void tearDown() throws Exception {
     }
-
-    // sample test
-
-    /**
-     * Test examines a BearFactory with 1 simple bear in it. The bear costs $30
-     * and there are no savings.
-     */
     @Test
     public void oneBearNoSavings() {
         Double ans = oneBear.calculateSavings();
@@ -208,13 +193,14 @@ public class GivenBlackBox {
         bears.addBear(customBear);
 
         customBear.clothing.add(new Clothing(4, "Hat"));
-        customBear.clothing.add(new Clothing(5, "Sunglasses"));
-        customBear.clothing.add(new Clothing(6, "Shoes"));
-        customBear.clothing.add(new Clothing(7, "Shirt"));
-        customBear.clothing.add(new Clothing(8, "Jacket"));
+        customBear.clothing.add(new Clothing(5, "Sunglasses"));//5
+        customBear.clothing.add(new Clothing(6, "Shoes"));//6
+        customBear.clothing.add(new Clothing(7, "Shirt"));//7
+        customBear.clothing.add(new Clothing(8, "Jacket"));//8
 
         Double expected = 4.0;
         Double ans = bears.calculateSavings();
+        //System.out.println("" + ans);
         assertEquals(expected, ans, 0.005);
     }
     @Test

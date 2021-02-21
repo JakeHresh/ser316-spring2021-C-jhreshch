@@ -219,7 +219,53 @@ public class BearWorkshop implements BearWorkshopInterface{
      * @return the savings if the customer would check out as double
      */
     public double calculateSavings() {
-        System.out.println("TODO: Implement me in Assignment 3");
-        return 0.0;
+        double savings = 0.0;
+        double priceArr[] = new double[BearCart.size()];
+        for(int i = 0; i < BearCart.size(); i++)
+        {
+            priceArr[i] = 0.0;
+            int accessoryCount = 0;
+            Collections.sort(BearCart.get(i).clothing);//bad sort
+            int freeCount = BearCart.get(i).clothing.size() / 3;
+            for (int j = 0; j < BearCart.get(i).clothing.size(); j++) 
+            {
+                 Clothing clothes = BearCart.get(i).clothing.get(j);
+                 if (j < freeCount) 
+                 {
+                    savings += clothes.price;
+                 } 
+                 else 
+                 {
+                    priceArr[i] += clothes.price;
+                    accessoryCount++;
+                 }
+             }
+             for(int k = 0; k < BearCart.get(i).noisemakers.size(); k++)
+             {
+                priceArr[i] += BearCart.get(i).noisemakers.get(k).price;
+                accessoryCount++;
+             }
+             if(BearCart.get(i).ink != null)
+             {
+                priceArr[i] += BearCart.get(i).ink.price;
+             }
+             priceArr[i] += BearCart.get(i).stuff.price;
+             priceArr[i] *= BearCart.get(i).casing.priceModifier;
+             if(accessoryCount >= 10)
+             {
+                double percent = priceArr[i]/10;
+                savings += percent;
+                priceArr[i] -= percent;
+             }
+        }
+        Arrays.sort(priceArr);//bad sort
+        int freeBears = BearCart.size() / 3;
+        for(int l = 0; l < freeBears; l++)
+        {
+            savings += priceArr[l];
+            //System.out.println("" + priceArr[l]);
+        }
+        //System.out.println("---");
+        return savings;
     }
 }
