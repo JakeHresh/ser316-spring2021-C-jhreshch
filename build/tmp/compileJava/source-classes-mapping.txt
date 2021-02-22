@@ -14,11 +14,11 @@ Bear.java
  main.java.Bear
 BearWorkshopInterface.java
  main.java.BearWorkshopInterface
+Clothing.java
+ main.java.Clothing
 Embroidery.java
  main.java.Embroidery
 Main.java
  main.java.Main
-Clothing.java
- main.java.Clothing
 BearWorkshop.java
  main.java.BearWorkshop

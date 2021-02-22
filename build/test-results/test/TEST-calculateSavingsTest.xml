@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="calculateSavingsTest" tests="57" skipped="0" failures="0" errors="0" timestamp="2021-02-21T19:21:45" hostname="LAPTOP-2CJQVE4C" time="0.041">
+<testsuite name="calculateSavingsTest" tests="57" skipped="0" failures="0" errors="0" timestamp="2021-02-22T00:55:05" hostname="LAPTOP-2CJQVE4C" time="0.042">
   <properties/>
-  <testcase name="threeBears14clothesExpect10PercentSaving" classname="calculateSavingsTest" time="0.015"/>
-  <testcase name="twoBears2clothingsExpectNoSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear11noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.003"/>
+  <testcase name="threeBears14clothesExpect10PercentSaving" classname="calculateSavingsTest" time="0.017"/>
+  <testcase name="twoBears2clothingsExpectNoSavings" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear11noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.004"/>
   <testcase name="oneBear9noiseAccessoriesNoSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear3clothingsDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear5clothingsSamePricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="oneBear5clothingsSamePricesExpectSaving" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="twoBears3clothes8accessoriesExpectClothesAndAccessoriesSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears6clothingsExpectMoreClothesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBearTest3clothingsExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears21accessoriesExpectAccessoriesSavingsOnly" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="oneBear10noiseAccessoriesDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears6ClothesExpectMoreClothingAndSameBearSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear5clothingsDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear5clothingsDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears9accessoriesExpectNoSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears10clothesExpectNo10PercentSavings" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="oneBear10noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.001"/>
-  <testcase name="twoBears10accessoriesExpectAccessoriesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear6clothingsDifferentPricesExpectMoreSaving" classname="calculateSavingsTest" time="0.001"/>
-  <testcase name="twoBears12clothesExpectNo10PercentSavings" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="twoBears10accessoriesExpectAccessoriesSavingsOnly" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear6clothingsDifferentPricesExpectMoreSaving" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="twoBears12clothesExpectNo10PercentSavings" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="threeBearsSaveOnCheapest" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear21noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears11accessoriesExpect10PercentAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears3clothingsExpectClothesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="twoBears1accessoryExpectNoSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear6clothingsSamePricesExpectMoreSaving" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="twoBears1accessoryExpectNoSavings" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear6clothingsSamePricesExpectMoreSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear3clothes8accessoriesExpectClothesAndAccessoriesSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="twoBearsExpectNoSavings" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="twoBearsExpectNoSavings" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="twoBears7clothingsExpectMoreClothesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="zeroBearsExpectNoSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears1accessoryExpectBearSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear21noiseAccessoriesDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears21AccessoriesExpect10PercentAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear20noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear20noiseAccessoriesSamePricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears11accessoriesExpectAccessoriesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear10clothesExpectNo10PercentSaving" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="threeBears5ClothesExpectClothingAndBearSavings" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="threeBears5ClothesExpectClothingAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear1noiseAccessoryNoSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears3ClothesExpectClothingAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBearNoSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="twoBears14clothesExpect10PercentSavingsAndClothesSavings" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="twoBears14clothesExpect10PercentSavingsAndClothesSavings" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="threeBears10clothesExpectNo10PercentSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="oneBear20noiseAccessoriesDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear12clothesExpectNo10PercentSaving" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear12clothesExpectNo10PercentSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears3clothes8accessoriesExpectClothesAndAccessoriesSavings" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="twoBears20accessoriesExpectAccessoriesSavingsOnly" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="oneBear7clothingsDifferentPricesExpectMoreSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears10accessoriesExpect10PercentAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear7clothingsSamePricesExpectMoreSaving" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="twoBears5clothingsExpectClothesSavingsOnly" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="oneBear7clothingsSamePricesExpectMoreSaving" classname="calculateSavingsTest" time="0.001"/>
+  <testcase name="twoBears5clothingsExpectClothesSavingsOnly" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears20accessoriesExpect10PercentAndBearSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="threeBearsTwoClothesBearSavingsExpected" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="threeBearsTwoClothesBearSavingsExpected" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="oneBear14clothesExpect10PercentSaving" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="oneBear2clothingsNoSavings" classname="calculateSavingsTest" time="0.001"/>
-  <testcase name="oneBear11noiseAccessoriesDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="oneBear2clothingsNoSavings" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="oneBear11noiseAccessoriesDifferentPricesExpectSaving" classname="calculateSavingsTest" time="0.001"/>
   <testcase name="threeBears12clothesExpectNo10PercentSaving" classname="calculateSavingsTest" time="0.0"/>
   <testcase name="threeBears7ClothesExpectMoreClothingAndSameBearSavings" classname="calculateSavingsTest" time="0.0"/>
-  <testcase name="threeBears9accessoriesExpectBearSavings" classname="calculateSavingsTest" time="0.0"/>
+  <testcase name="threeBears9accessoriesExpectBearSavings" classname="calculateSavingsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

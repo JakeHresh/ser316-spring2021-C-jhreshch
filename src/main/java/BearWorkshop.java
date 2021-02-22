@@ -24,6 +24,13 @@ public class BearWorkshop implements BearWorkshopInterface{
         BearCart = new LinkedList<>();
         customer = new Customer(state);
     }
+    /*
+    This constructor is included to test different branches in the checkout method.
+    */
+    public BearWorkshop(int age1, int age2, String state){
+        BearCart = new LinkedList<>();
+        customer = new Customer(age1, state, new Customer(age2, state, new Customer(state)));
+    }
 
     /**
      * This is a convenience method to calculate the cost of bears in the
@@ -125,14 +132,15 @@ public class BearWorkshop implements BearWorkshopInterface{
      * @return true if successful, false otherwise
      * TODO: test me and fix me in assignment 3
      */
+    /*
+    Given that adding an element to the LinkedList will return either true or will throw an exception
+    and will never return false, the else branch is impossible to reach and, therefore, unnecessary.
+    */
     @Override
     public boolean addBear(Bear bear)       {
-        if (this.BearCart.add(bear))        {
+         this.BearCart.add(bear);       
             return true;
-                                            }
-        else                                {
-            return false;
-                                            }
+                                            
     }
 
     // WE ARE REMOVING A BEAR FROM THE SHOPPING CART
@@ -153,14 +161,25 @@ public class BearWorkshop implements BearWorkshopInterface{
      * TODO: Test me and fix me in assignment 3
      * @return
      */
+    /*
+    One edit to this function is that the lines printing that the guardian is too young 
+    and to return -1 are not grouped together, meaning that the guardian might be old enough
+    to purchase a bear for their child, but will still be rejected. Therefore, these instructions
+    ought to be grouped together.
+
+    Additionally, the function was capable of being simplified by subtracting the savings amount
+    by the raw cost of the purchase, meaning this function didn't need to compute the savings since
+    it's done elsewhere.
+    */
     @Override
     public double checkout() {
         if (this.customer.age <= 13) {
-            if (this.customer.parent.age < 18)
+            if (this.customer.parent.age < 18){
                 System.out.println("Guardian is too young");
                 return -1;
+            }
         }
-        double temp = 0;
+        /*double temp = 0;
         Double Cost = Double.valueOf(0.00);
         for (Bear bear: BearCart) {
             Cost = Cost + getRawCost(bear);
@@ -199,8 +218,15 @@ public class BearWorkshop implements BearWorkshopInterface{
             }
         }
         cost = temp;
-
-        return cost * calculateTax();
+        System.out.println("" + (cost * calculateTax()));
+        return cost * calculateTax();*/
+        double rawCost = 0;
+        for(int i = 0; i < BearCart.size(); i++)
+        {
+            rawCost += getRawCost(BearCart.get(i));
+        }
+        double savings = calculateSavings();
+        return (rawCost - savings) * calculateTax();
     }
 
 
@@ -225,7 +251,7 @@ public class BearWorkshop implements BearWorkshopInterface{
         {
             priceArr[i] = 0.0;
             int accessoryCount = 0;
-            Collections.sort(BearCart.get(i).clothing);//bad sort
+            Collections.sort(BearCart.get(i).clothing);
             int freeCount = BearCart.get(i).clothing.size() / 3;
             for (int j = 0; j < BearCart.get(i).clothing.size(); j++) 
             {
