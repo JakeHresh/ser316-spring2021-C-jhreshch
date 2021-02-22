@@ -32,14 +32,7 @@ public class BearWorkshop implements BearWorkshopInterface{
         customer = new Customer(age1, state, new Customer(age2, state, new Customer(state)));
     }
 
-    /**
-     * This is a convenience method to calculate the cost of bears in the
-     * shopping cart for a customer in the BearFactory. This methods calculates
-     * the overall price of ONE bear, with all its add-ons and should include the discounts. 
-     * @param bear to get cost of
-     * @return double representation of bear cost
-     * TODO: test me and fix me in assignment 3
-     */
+    
     @Override
     public double getCost(Bear bear) {
         Collections.sort(bear.clothing);
