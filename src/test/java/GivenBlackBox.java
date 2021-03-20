@@ -32,10 +32,10 @@ public class GivenBlackBox {
     private Class<BearWorkshop> classUnderTest;
 
     @SuppressWarnings("unchecked")
-    public GivenBlackBox(Object classUnderTest) {
-        this.classUnderTest = (Class<BearWorkshop>) classUnderTest;
+    public GivenBlackBox(/*Object classUnderTest*/) {
+        //this.classUnderTest = (Class<BearWorkshop>) classUnderTest;
     }
-
+    /*
     @Parameters
     public static Collection<Object[]> courseGradesUnderTest() {
         Object[][] classes = {
@@ -52,6 +52,10 @@ public class GivenBlackBox {
     private BearWorkshop createBearWorkshop(String name) throws Exception {
         Constructor<BearWorkshop> constructor = classUnderTest.getConstructor(String.class);
         return constructor.newInstance(name);
+    }*/
+
+    private BearWorkshop createBearWorkshop(String name) throws Exception{
+        return new BearWorkshop(name);
     }
 
     BearWorkshop oneBear;
