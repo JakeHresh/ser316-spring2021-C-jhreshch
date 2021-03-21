@@ -1,7 +1,10 @@
 package main.java;
 
+import java.lang.Math;
+
 import java.util.LinkedList;
-import main.java.Stuffing.stuffing;
+
+import main.java.Stuffing.StuffingE;
 
 public class Bear implements Comparable<Bear> {
     public Casing casing;
@@ -21,7 +24,7 @@ public class Bear implements Comparable<Bear> {
 
     public Bear() {
         this.casing = new Casing();
-        this.stuff = new Stuffing(stuffing.BASE);
+        this.stuff = new Stuffing(StuffingE.BASE);
         noisemakers = new LinkedList<>();
         clothing = new LinkedList<>();
         ink = new Embroidery("");
@@ -32,7 +35,7 @@ public class Bear implements Comparable<Bear> {
      * There I am.
      */
 
-    public Bear(stuffing stuff) {
+    public Bear(StuffingE stuff) {
         this.casing = new Casing();
         this.stuff = new Stuffing(stuff);
         noisemakers = new LinkedList<>();
@@ -72,7 +75,35 @@ public class Bear implements Comparable<Bear> {
      */
 
     @Override
-    public int compareTo(Bear bear) {
+    public int compareTo(Bear bear) { //’SER316 TASK 2 SPOTBUGS FIX
         return new Double(this.price).compareTo(bear.price);
+    }
+
+    @Override
+    public int hashCode() { //’SER316 TASK 2 SPOTBUGS FIX
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + 1237;
+        result = prime * result + (int) price;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) { //’SER316 TASK 2 SPOTBUGS FIX
+        if (this == obj) { 
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) { 
+            return false;
+        }
+        Bear other = (Bear) obj;
+        if (Math.abs(price - other.price) < .0000001) {
+            return false;
+        }
+
+        return true;
     }
 }

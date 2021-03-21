@@ -1,6 +1,6 @@
 package main.java;
 
-import main.java.Stuffing.stuffing;
+import main.java.Stuffing.StuffingE;
 
 public class Main {
     
@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
         //Fill me in!
         
-        Bear bear1 = new Bear(stuffing.FOAM);
-        Bear bear2 = new Bear(stuffing.BASE);
-        Bear bear3 = new Bear(stuffing.DOWN);
+        Bear bear1 = new Bear(StuffingE.FOAM);
+        Bear bear2 = new Bear(StuffingE.BASE);
+        Bear bear3 = new Bear(StuffingE.DOWN);
         
         BearWorkshop workshop = new BearWorkshop("AZ");
         workshop.addBear(bear2);

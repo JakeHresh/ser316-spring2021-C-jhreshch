@@ -1,7 +1,7 @@
 package main.java;
 
 public class Stuffing {
-    public enum stuffing {
+    public enum StuffingE {
         BASE,
         DOWN,
         FOAM
@@ -10,7 +10,7 @@ public class Stuffing {
     //stuffing polyStuffing;’SER316 TASK 2 SPOTBUGS FIX
     int price;
 
-    public Stuffing(stuffing interiorStuffing) {
+    public Stuffing(StuffingE interiorStuffing) {
 
         switch (interiorStuffing) {
             case BASE:

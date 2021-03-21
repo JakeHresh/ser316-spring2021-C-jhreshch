@@ -241,7 +241,7 @@ public class BearWorkshop implements BearWorkshopInterface {
     public double calculateSavings() {
         double savings = 0.0;
         double priceArr[] = new double [bearCart.size()];
-        for(int i = 0; i < bearCart.size(); i++) {
+        for (int i = 0; i < bearCart.size(); i++) {
             priceArr[i] = 0.0;
             int accessoryCount = 0;
             Collections.sort(bearCart.get(i).clothing);
@@ -250,8 +250,7 @@ public class BearWorkshop implements BearWorkshopInterface {
                  Clothing clothes = bearCart.get(i).clothing.get(j);
                  if (j < freeCount) {
                     savings += clothes.price;
-                 } 
-                 else {
+                 } else {
                     priceArr[i] += clothes.price;
                     accessoryCount++;
                  }

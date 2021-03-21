@@ -36,7 +36,7 @@ public class GivenWhiteBox {
     @Test
     public void getCostSequence1(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
         customBear.clothing.add(new Clothing(5, "Sunglasses"));
@@ -54,7 +54,7 @@ public class GivenWhiteBox {
     @Test
     public void getCostSequence2(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
         customBear.clothing.add(new Clothing(5, "Sunglasses"));
@@ -72,7 +72,7 @@ public class GivenWhiteBox {
     @Test
     public void getRawCostSequence1(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
         customBear.clothing.add(new Clothing(5, "Sunglasses"));
@@ -89,7 +89,7 @@ public class GivenWhiteBox {
     @Test
     public void getRawCostSequence2(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
         customBear.clothing.add(new Clothing(5, "Sunglasses"));
@@ -104,14 +104,14 @@ public class GivenWhiteBox {
     @Test
     public void addBearSequence1(){
         oneBear = new BearWorkshop("AZ");
-        boolean added = oneBear.addBear(new Bear(Stuffing.stuffing.BASE));
+        boolean added = oneBear.addBear(new Bear(Stuffing.StuffingE.BASE));
         assertTrue(added);
     }
 
     @Test
     public void removeBearSequence1(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         boolean removed = oneBear.removeBear(customBear);
         assertTrue(removed);
@@ -120,7 +120,7 @@ public class GivenWhiteBox {
     @Test
     public void removeBearSequence2(){
         oneBear = new BearWorkshop("AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         oneBear.removeBear(customBear);
         boolean removed = oneBear.removeBear(customBear);
@@ -130,7 +130,7 @@ public class GivenWhiteBox {
     @Test
     public void checkoutSequence2(){
         oneBear = new BearWorkshop(13, 13, "AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         Double ans = oneBear.checkout();
         assertEquals(-1, ans, 0.005);
@@ -139,9 +139,9 @@ public class GivenWhiteBox {
     @Test
     public void checkoutSequence3(){
         oneBear = new BearWorkshop(13, 21, "AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
-        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
-        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
+        Bear customBear1 = new Bear(Stuffing.StuffingE.BASE);
+        Bear customBear2 = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         oneBear.addBear(customBear1);
         oneBear.addBear(customBear2);
@@ -153,9 +153,9 @@ public class GivenWhiteBox {
     @Test
     public void checkoutSequence4(){
         oneBear = new BearWorkshop(18, 21, "AZ");
-        Bear customBear = new Bear(Stuffing.stuffing.BASE);
-        Bear customBear1 = new Bear(Stuffing.stuffing.BASE);
-        Bear customBear2 = new Bear(Stuffing.stuffing.BASE);
+        Bear customBear = new Bear(Stuffing.StuffingE.BASE);
+        Bear customBear1 = new Bear(Stuffing.StuffingE.BASE);
+        Bear customBear2 = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         oneBear.addBear(customBear1);
         oneBear.addBear(customBear2);
