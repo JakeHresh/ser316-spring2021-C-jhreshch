@@ -43,7 +43,7 @@ public class calculateSavingsTest {
     }
 */
     private BearWorkshop createBearWorkshop(String name) throws Exception{
-    	return new BearWorkshop(name);
+        return new BearWorkshop(name);
     }
 
     BearWorkshop oneBear;
@@ -114,10 +114,10 @@ public class calculateSavingsTest {
         Bear customBear = new Bear(Stuffing.stuffing.BASE);
         bears.addBear(customBear);
 
-	    customBear.clothing.add(new Clothing(4, "Hat"));
-	    customBear.clothing.add(new Clothing(4, "Sunglasses"));
-	    customBear.clothing.add(new Clothing(4, "Shoes"));
-	    
+        customBear.clothing.add(new Clothing(4, "Hat"));
+        customBear.clothing.add(new Clothing(4, "Sunglasses"));
+        customBear.clothing.add(new Clothing(4, "Shoes"));
+        
         Double bearsExpected = 4.0;
         Double ans = bears.calculateSavings();
         assertEquals(bearsExpected, ans, 0.005);

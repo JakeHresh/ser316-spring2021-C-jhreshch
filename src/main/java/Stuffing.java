@@ -10,7 +10,7 @@ public class Stuffing {
     stuffing polyStuffing;
     int price;
 
-    public Stuffing (stuffing interiorStuffing) {
+    public Stuffing(stuffing interiorStuffing) {
 
         switch (interiorStuffing) {
             case BASE:
@@ -24,6 +24,8 @@ public class Stuffing {
             case FOAM:
                 this.polyStuffing = stuffing.FOAM;
                 this.price = 50;
+                break;
+            default:
                 break;
         }
     }

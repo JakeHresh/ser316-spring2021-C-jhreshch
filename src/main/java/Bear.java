@@ -1,9 +1,9 @@
 package main.java;
 
-import main.java.Stuffing.stuffing;
 import java.util.LinkedList;
+import main.java.Stuffing.stuffing;
 
-public class Bear implements Comparable<Bear>{
+public class Bear implements Comparable<Bear> {
     public Casing casing;
     public Stuffing stuff;
     public Embroidery ink; 
@@ -15,6 +15,9 @@ public class Bear implements Comparable<Bear>{
     // bear has a tattoo/emroider or not (opt)
     // bear has a noisemaker (opt)
 
+    /**
+     * Here I am.
+     */
 
     public Bear() {
         this.casing = new Casing();
@@ -25,6 +28,10 @@ public class Bear implements Comparable<Bear>{
         price = 0;
     }
 
+    /**
+     * There I am.
+     */
+
     public Bear(stuffing stuff) {
         this.casing = new Casing();
         this.stuff = new Stuffing(stuff);
@@ -34,9 +41,17 @@ public class Bear implements Comparable<Bear>{
         price = 0;
     }
 
+    /**
+     * There I go.
+     */
+
     public void setPrice(double incomingPrice) {
         this.price = incomingPrice;
     }
+
+    /**
+     * There I was.
+     */
 
     public boolean addNoise(NoiseMaker noise) {
         if (this.noisemakers.size() >= 5) {
@@ -51,6 +66,10 @@ public class Bear implements Comparable<Bear>{
             return true;
         }
     }
+
+    /**
+     * Here I am.
+     */
 
     @Override
     public int compareTo(Bear bear) {
