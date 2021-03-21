@@ -2,7 +2,7 @@ package main.java;
 
 public class Clothing implements Comparable<Clothing> {
     public double price;
-    public String Description;
+    //public String Description;’SER316 TASK 2 SPOTBUGS FIX
 
     public Clothing() {
         this(4.00, "Generic Offtrack Separate");
@@ -11,7 +11,7 @@ public class Clothing implements Comparable<Clothing> {
 
     public Clothing(double price, String descr) {
         this.price = price;
-        this.Description = descr;
+        //this.Description = descr;’SER316 TASK 2 SPOTBUGS FIX
     }
     /**
      * Gone.

@@ -45,12 +45,12 @@ public class BearWorkshop implements BearWorkshopInterface {
     public double getCost(Bear bear) {
         Collections.sort(bear.clothing);
         int numFree = bear.clothing.size() / 3;
-        ArrayList<Clothing> freeClothes = new ArrayList<>();
+        //ArrayList<Clothing> freeClothes = new ArrayList<>();’SER316 TASK 2 SPOTBUGS FIX
 
         for (int i = 0; i < bear.clothing.size(); i++) {
             Clothing clothes = bear.clothing.get(i);
             if (i < numFree) {
-                freeClothes.add(clothes);
+                //freeClothes.add(clothes);’SER316 TASK 2 SPOTBUGS FIX
             } else {
                 bear.price += clothes.price;
             }
