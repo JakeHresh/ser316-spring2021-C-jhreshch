@@ -1,9 +1,12 @@
 package main.java;
 
-import main.java.Stuffing.stuffing;
+import java.lang.Math;
+
 import java.util.LinkedList;
 
-public class Bear implements Comparable<Bear>{
+import main.java.Stuffing.StuffingE;
+
+public class Bear implements Comparable<Bear> {
     public Casing casing;
     public Stuffing stuff;
     public Embroidery ink; 
@@ -15,17 +18,24 @@ public class Bear implements Comparable<Bear>{
     // bear has a tattoo/emroider or not (opt)
     // bear has a noisemaker (opt)
 
+    /**
+     * Here I am.
+     */
 
     public Bear() {
         this.casing = new Casing();
-        this.stuff = new Stuffing(stuffing.BASE);
+        this.stuff = new Stuffing(StuffingE.BASE);
         noisemakers = new LinkedList<>();
         clothing = new LinkedList<>();
         ink = new Embroidery("");
         price = 0;
     }
 
-    public Bear(stuffing stuff) {
+    /**
+     * There I am.
+     */
+
+    public Bear(StuffingE stuff) {
         this.casing = new Casing();
         this.stuff = new Stuffing(stuff);
         noisemakers = new LinkedList<>();
@@ -34,9 +44,17 @@ public class Bear implements Comparable<Bear>{
         price = 0;
     }
 
+    /**
+     * There I go.
+     */
+
     public void setPrice(double incomingPrice) {
         this.price = incomingPrice;
     }
+
+    /**
+     * There I was.
+     */
 
     public boolean addNoise(NoiseMaker noise) {
         if (this.noisemakers.size() >= 5) {
@@ -52,8 +70,40 @@ public class Bear implements Comparable<Bear>{
         }
     }
 
+    /**
+     * Here I am.
+     */
+
     @Override
-    public int compareTo(Bear bear) {
+    public int compareTo(Bear bear) { //’SER316 TASK 2 SPOTBUGS FIX
         return new Double(this.price).compareTo(bear.price);
+    }
+
+    @Override
+    public int hashCode() { //’SER316 TASK 2 SPOTBUGS FIX
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + 1237;
+        result = prime * result + (int) price;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) { //’SER316 TASK 2 SPOTBUGS FIX
+        if (this == obj) { 
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) { 
+            return false;
+        }
+        Bear other = (Bear) obj;
+        if (Math.abs(price - other.price) < .0000001) {
+            return false;
+        }
+
+        return true;
     }
 }
