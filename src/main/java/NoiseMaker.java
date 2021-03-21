@@ -2,8 +2,8 @@ package main.java;
 
 public class NoiseMaker {
     public double price;
-    String label;
-    String recording;
+    //String label;’SER316 TASK 2 SPOTBUGS FIX
+    //String recording;’SER316 TASK 2 SPOTBUGS FIX
 
     Location spot;
 
@@ -16,8 +16,8 @@ public class NoiseMaker {
 
     public NoiseMaker(String label, String recording,
                       Location location) {
-        this.label = label;
-        this.recording = recording;
+        //this.label = label;’SER316 TASK 2 SPOTBUGS FIX
+        //this.recording = recording;’SER316 TASK 2 SPOTBUGS FIX
         this.spot = location;
         switch (location) {
             case CENTERBODY:
@@ -34,8 +34,8 @@ public class NoiseMaker {
 
     public NoiseMaker(String label, String recording,
                       int location) {
-        this.label = label;
-        this.recording = recording;
+        //this.label = label;’SER316 TASK 2 SPOTBUGS FIX
+        //this.recording = recording;’SER316 TASK 2 SPOTBUGS FIX
         /*this.spot = location;
         switch (location) {
             case CENTERBODY:
