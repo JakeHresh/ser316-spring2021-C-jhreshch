@@ -39,11 +39,19 @@ public class Clothing implements Comparable<Clothing> {
 
     @Override
     public boolean equals(Object obj) { //’SER316 TASK 2 SPOTBUGS FIX
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
         Clothing other = (Clothing) obj;
-        if (price != other.price) return false;
+        if (price != other.price) {
+            return false;
+        }
         return true;
     }
 }

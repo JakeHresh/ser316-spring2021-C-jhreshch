@@ -10,6 +10,10 @@ public class Stuffing {
     //stuffing polyStuffing;’SER316 TASK 2 SPOTBUGS FIX
     int price;
 
+    /**
+     * Here is the missing comment.
+     */
+
     public Stuffing(StuffingE interiorStuffing) {
 
         switch (interiorStuffing) {

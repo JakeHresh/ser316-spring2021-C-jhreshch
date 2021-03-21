@@ -119,28 +119,19 @@ public class BearWorkshop implements BearWorkshopInterface {
      */
     public double calculateTax() {
         double tax;
-        if(customer.state.equals("AZ"))
-        {
+        if (customer.state.equals("AZ")) {
             tax = 1.07;
-        }
-        else if(customer.state.equals("NY"))
-        {
+        } else if (customer.state.equals("NY")) {
             tax = 1.09;
         }
-        else if(customer.state.equals("VA"))
-        {
+        else if (customer.state.equals("VA")) {
             tax = 1.05;
-        }
-        else if(customer.state.equals("DC"))
-        {
+        } else if (customer.state.equals("DC")) {
             tax = 1.105;
-        }
-        else if(customer.state.equals("CA"))
+        } else if (customer.state.equals("CA"))
         {
             tax = 1.1;
-        }
-        else
-        {
+        } else {
             tax = 1.05;
         }
         return tax;

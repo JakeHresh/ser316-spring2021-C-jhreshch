@@ -1,7 +1,7 @@
 package main.java;
 
 public class Embroidery {
-    final static double pricePerLetter = 1.00;
+    static final double pricePerLetter = 1.00;
     double price;
     //String embroidText;’SER316 TASK 2 SPOTBUGS FIX
 
