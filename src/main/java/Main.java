@@ -15,7 +15,7 @@ public class Main {
         Bear bear2 = new Bear(StuffingE.BASE);
         Bear bear3 = new Bear(StuffingE.DOWN);
         
-        BearWorkshop workshop = new BearWorkshop("AZ");
+        BearWorkshop workshop = new BearWorkshop();
         workshop.addBear(bear2);
         workshop.addBear(bear3);
         workshop.addBear(bear1);

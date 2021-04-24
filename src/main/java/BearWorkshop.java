@@ -26,28 +26,31 @@ public class BearWorkshop implements BearWorkshopInterface {
     // Workshop has a customer
     Customer customer;
     List<Bear> bearCart;
+    double tx;
 
     /**
      * Default constructor for the Bear Workshop.
      */
     public BearWorkshop() {
-        this("AZ");
+        this("AZ", 1.07);
     }
 
     /**
      * This is a parameterized ctor for a BearWorkshop.
      * @param state customer is in
      */
-    public BearWorkshop(String state) {
+    public BearWorkshop(String state, double t) {
         bearCart = new LinkedList<>();
         customer = new Customer(state);
+        tx = t;
     }
     /*
     This constructor is included to test different branches in the checkout method.
     */
-    public BearWorkshop(int age1, int age2, String state) {
+    public BearWorkshop(int age1, int age2, String state, double t) {
         bearCart = new LinkedList<>();
         customer = new Customer(age1, state, new Customer(age2, state, new Customer(state)));
+        tx = t;
     }
 
     
@@ -118,7 +121,7 @@ public class BearWorkshop implements BearWorkshopInterface {
      * @return 
      */
     public double calculateTax() {
-        double tax;
+        /*double tax;
         if (customer.state.equals("AZ")) {
             tax = 1.07;
         } else if (customer.state.equals("NY")) {
@@ -134,7 +137,8 @@ public class BearWorkshop implements BearWorkshopInterface {
         } else {
             tax = 1.05;
         }
-        return tax;
+        return tax;*/
+        return tx;
     }
 
     /**
@@ -189,47 +193,6 @@ public class BearWorkshop implements BearWorkshopInterface {
                 return -1;
             }
         }
-        /*double temp = 0;
-        Double Cost = Double.valueOf(0.00);
-        for (Bear bear: bearCart) {
-            Cost = Cost + getRawCost(bear);
-        }
-        for (Bear bear: this.bearCart) {
-            temp += getCost(bear);
-        }
-
-
-        double savings = 0;
-        // calculate total cost
-        double rawCost = 0;
-        for (Bear bear: bearCart) {
-            rawCost += this.getRawCost(bear);
-        }
-
-        // calculate adjusted cost
-        double cost = 0;
-        for (Bear bear: this.bearCart) {
-            cost += this.getCost(bear);
-        }
-        savings += rawCost - cost; // calc delta between raw and prorated cost
-
-        List<Bear> nonFreeBears = new LinkedList<>();
-        int counter = 0;
-        int numberOfFreeBearsInBearCart = bearCart.size() / 3;
-        double discountedCost = 0;
-        Bear freeBear = null;
-
-        for (int count = 0; count <= numberOfFreeBearsInBearCart; ++count) {
-            for (Bear bear : bearCart) {
-                if (freeBear != null && bear.price < freeBear.price)
-                    freeBear = bear;
-                    temp += temp - temp * 2 + bear.price;
-
-            }
-        }
-        cost = temp;
-        System.out.println("" + (cost * calculateTax()));
-        return cost * calculateTax();*/
         double rawCost = 0;
         for (int i = 0; i < bearCart.size(); i++) {
             rawCost += getRawCost(bearCart.get(i));

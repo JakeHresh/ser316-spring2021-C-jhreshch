@@ -51,7 +51,7 @@ public class GivenBlackBox {
 
     private BearWorkshop createBearWorkshop(String name) throws Exception {
         Constructor<BearWorkshop> constructor = classUnderTest.getConstructor(String.class);
-        return constructor.newInstance(name);
+        return constructor.newInstance(/*name*/);
     }
 
     BearWorkshop oneBear;

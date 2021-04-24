@@ -24,7 +24,7 @@ public class GivenWhiteBox {
     @Test
     public void checkoutOneBear() {
         // One Student
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         oneBear.addBear(new Bear());
         Double ans = oneBear.checkout();
         assertEquals(32.1, ans, 0.005);
@@ -35,7 +35,7 @@ public class GivenWhiteBox {
     */
     @Test
     public void getCostSequence1(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
@@ -53,7 +53,7 @@ public class GivenWhiteBox {
     */
     @Test
     public void getCostSequence2(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
@@ -71,7 +71,7 @@ public class GivenWhiteBox {
     */
     @Test
     public void getRawCostSequence1(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
@@ -88,7 +88,7 @@ public class GivenWhiteBox {
     */
     @Test
     public void getRawCostSequence2(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         customBear.clothing.add(new Clothing(4, "Hat"));
@@ -103,14 +103,14 @@ public class GivenWhiteBox {
 
     @Test
     public void addBearSequence1(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         boolean added = oneBear.addBear(new Bear(Stuffing.StuffingE.BASE));
         assertTrue(added);
     }
 
     @Test
     public void removeBearSequence1(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         boolean removed = oneBear.removeBear(customBear);
@@ -119,7 +119,7 @@ public class GivenWhiteBox {
 
     @Test
     public void removeBearSequence2(){
-        oneBear = new BearWorkshop("AZ");
+        oneBear = new BearWorkshop(/*"AZ"*/);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         oneBear.removeBear(customBear);
@@ -129,7 +129,7 @@ public class GivenWhiteBox {
 
     @Test
     public void checkoutSequence2(){
-        oneBear = new BearWorkshop(13, 13, "AZ");
+        oneBear = new BearWorkshop(13, 13, "AZ", 1.07);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         oneBear.addBear(customBear);
         Double ans = oneBear.checkout();
@@ -138,7 +138,7 @@ public class GivenWhiteBox {
 
     @Test
     public void checkoutSequence3(){
-        oneBear = new BearWorkshop(13, 21, "AZ");
+        oneBear = new BearWorkshop(13, 21, "AZ", 1.07);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         Bear customBear1 = new Bear(Stuffing.StuffingE.BASE);
         Bear customBear2 = new Bear(Stuffing.StuffingE.BASE);
@@ -152,7 +152,7 @@ public class GivenWhiteBox {
 
     @Test
     public void checkoutSequence4(){
-        oneBear = new BearWorkshop(18, 21, "AZ");
+        oneBear = new BearWorkshop(18, 21, "AZ", 1.07);
         Bear customBear = new Bear(Stuffing.StuffingE.BASE);
         Bear customBear1 = new Bear(Stuffing.StuffingE.BASE);
         Bear customBear2 = new Bear(Stuffing.StuffingE.BASE);

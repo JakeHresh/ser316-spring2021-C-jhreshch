@@ -43,7 +43,7 @@ public class calculateSavingsTest {
     }
 */
     private BearWorkshop createBearWorkshop(String name) throws Exception{
-        return new BearWorkshop(name);
+        return new BearWorkshop(/*name*/);
     }
 
     BearWorkshop oneBear;
